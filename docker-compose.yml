@@ -1,0 +1,38 @@
+version: '3.9'
+
+networks:
+  app_network:
+    driver: bridge
+
+services:
+  app:
+    container_name: 'app'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=superuser
+      - POSTGRES_PASSWORD=superpassword
+      - BASE_URL=http://app:4000
+    ports:
+      - '4000:4000'
+    depends_on:
+      - postgres
+    networks:
+      - app_network
+
+  postgres:
+    container_name: 'postgres_database'
+    image: postgres
+    environment:
+      POSTGRES_DB: 'postgres'
+      POSTGRES_USER: 'superuser'
+      POSTGRES_PASSWORD: 'superpassword'
+      PGDATA: '/var/lib/postgresql/data/pgdata'
+    ports:
+      - '5432:5432'
+    networks:
+      - app_network
