@@ -12,7 +12,7 @@ export default class Service {
 	}
 
 	public get(): Promise<MapObject[]> {
-		return this.repository.get({});
+		return this.repository.get({}, { attributes: true });
 	}
 
 	public getById(id: number): Promise<MapObject | null> {
@@ -21,7 +21,7 @@ export default class Service {
 
 	public async updateById(id: number, mapObject: MapObjectSave): Promise<MapObject> {
 		const existedMapObject = await this.repository.getOneOrFail({ id });
-		if (existedMapObject.isDefault) {
+		if (existedMapObject.is_default) {
 			throw new CustomError(409, 'Default map object cannot be updated');
 		}
 
@@ -31,7 +31,7 @@ export default class Service {
 	}
 
 	public deleteById = async (id: number): Promise<string> => {
-		const mapObject = await this.repository.getOne({ id, isDefault: true });
+		const mapObject = await this.repository.getOne({ id, is_default: true });
 		if (mapObject) {
 			throw new CustomError(409, 'Default mapObject cannot be deleted');
 		}

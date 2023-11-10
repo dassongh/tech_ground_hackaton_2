@@ -8,7 +8,7 @@ export default class MapObject {
 	id: number;
 
 	@Column({ default: false })
-	isDefault: boolean;
+	is_default: boolean;
 
 	@Column({ type: 'numeric', precision: 10, scale: 8 })
 	latitude: number;
