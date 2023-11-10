@@ -16,8 +16,9 @@ export default {
 		get: {
 			tags,
 			summary: 'List of Objects',
+			parameters: helper.toParameters(schema.getObjects),
 			responses: {
-				200: helper.toResponse({ data: mapObject }),
+				200: helper.toResponse({ data: mapObject, count: 1 }),
 				...errorResponse.badRequest,
 				...errorResponse.InternalServer,
 			},

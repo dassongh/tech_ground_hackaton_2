@@ -43,4 +43,16 @@ export default class Schema {
 			.items(Joi.object().keys({ id: Joi.number().required() }))
 			.optional(),
 	});
+
+	public getObjects = Joi.object().keys({
+		page: Joi.number().optional(),
+		limit: Joi.number().optional(),
+		is_default: Joi.boolean().optional(),
+		type: Joi.string()
+			.valid(...Object.values(MapObjectType))
+			.optional(),
+		attributes: Joi.alternatives(Joi.number(), Joi.array().items(Joi.number()))
+			.optional()
+			.description('Supports multiple query'),
+	});
 }

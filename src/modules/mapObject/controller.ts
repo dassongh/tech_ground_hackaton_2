@@ -14,10 +14,22 @@ export default class Controller extends BaseController {
 			.catch(next);
 	};
 
-	public get = (_req: Request, res: Response, next: NextFunction) => {
+	public get = ({ query: { page, limit, ...query } }: Request, res: Response, next: NextFunction) => {
+		const pageNumber = Number(page) || 1;
+		const limitNumber = Number(limit) || 10;
+
+		const pagination = {
+			skip: limitNumber * (pageNumber - 1),
+			take: limitNumber,
+		};
+
+		if (query.attributes && !Array.isArray(query.attributes)) {
+			query.attributes = [query.attributes] as string[];
+		}
+
 		return this.service
-			.get()
-			.then(result => this.ok(res, result))
+			.get(pagination, query)
+			.then(result => this.okPaginated(res, result))
 			.catch(next);
 	};
 

@@ -1,8 +1,9 @@
 import Repository from './repository';
 
+import { Pagination, WithPagination } from '../../common/interfaces';
 import MapObject from '../../entity/mapObject';
 import { CustomError } from '../../utils/customError';
-import { MapObjectSave } from './interfaces';
+import { GetObjectsQuery, MapObjectSave } from './interfaces';
 
 export default class Service {
 	private repository = new Repository();
@@ -11,8 +12,8 @@ export default class Service {
 		return this.repository.save(mapObject);
 	}
 
-	public get(): Promise<MapObject[]> {
-		return this.repository.get({}, { attributes: true });
+	public get(pagination: Pagination, query: GetObjectsQuery): WithPagination<MapObject[]> {
+		return this.repository.getMapObjectsAndCount(pagination, query);
 	}
 
 	public getById(id: number): Promise<MapObject | null> {
