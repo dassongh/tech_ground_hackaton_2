@@ -1,13 +1,10 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export default class User {
+export default class ObjectAttribute {
 	@PrimaryGeneratedColumn()
 	id: number;
 
 	@Column()
-	firstName: string;
-
-	@Column()
-	lastName: string;
+	type: string;
 }

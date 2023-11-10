@@ -8,10 +8,7 @@ import AppDataSource from './data-source';
 import RootRouter from './root.router';
 
 import { errorHandler, routeNotFound } from './middleware/errorHandler';
-
-AppDataSource.initialize().catch((err) => {
-  console.error('Error during Data Source initialization:', err);
-});
+import loadSeedData from './seed';
 
 const app = express();
 
@@ -23,4 +20,8 @@ app.use(cookieParser());
 app.use('/api/v1', new RootRouter().router);
 app.use([routeNotFound, errorHandler]);
 
-app.listen(PORT, () => console.table({ name: '' }));
+app.listen(PORT, async () => {
+	await AppDataSource.initialize();
+	await loadSeedData();
+	console.table({ name: '' });
+});

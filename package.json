@@ -1,46 +1,41 @@
 {
-  "name": "Express server template",
-  "version": "0.0.1",
-  "description": "Node.JS Template",
-  "main": "src/index.ts",
-  "scripts": {
-    "build": "tsc --build tsconfig.json",
-    "start": "node ./dist",
-    "start:local": "env-cmd -f ./config/.env nodemon ./src",
-    "prettier-format": "prettier --config .prettierrc ./src/**/*.ts --write",
-    "lint": "eslint . --ext .ts",
-    "debug": "tsc --build tsconfig.json && env-cmd -f ./config/.env node --inspect ./dist"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github"
-  },
-  "author": "Alexander Salnykov",
-  "license": "ISC",
-  "homepage": "https://github/",
-  "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "cors": "2.8.5",
-    "env-cmd": "10.1.0",
-    "express": "4.17.1",
-    "joi": "17.4.2",
-    "jsonwebtoken": "^8.5.1",
-    "pg": "^8.7.3",
-    "reflect-metadata": "^0.1.13",
-    "typeorm": "^0.3.7"
-  },
-  "devDependencies": {
-    "@types/express": "4.17.13",
-    "@types/express-jwt": "6.0.3",
-    "@types/node": "16.11.7",
-    "@typescript-eslint/eslint-plugin": "5.4.0",
-    "@typescript-eslint/parser": "5.4.0",
-    "eslint": "8.3.0",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "nodemon": "2.0.15",
-    "prettier": "2.5.0",
-    "ts-node": "10.7.0",
-    "typescript": "4.5.2"
-  }
+	"name": "Express server template",
+	"version": "0.0.1",
+	"description": "Node.JS Template",
+	"main": "src/index.ts",
+	"scripts": {
+		"build": "tsc --build tsconfig.json",
+		"start": "node ./dist",
+		"start:local": "env-cmd -f ./config/.env nodemon ./src",
+		"prettier-format": "prettier --config .prettierrc ./src/**/*.ts --write",
+		"lint": "eslint . --ext .ts",
+		"debug": "tsc --build tsconfig.json && env-cmd -f ./config/.env node --inspect ./dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github"
+	},
+	"author": "Alexander Salnykov",
+	"license": "ISC",
+	"homepage": "https://github/",
+	"dependencies": {
+		"cookie-parser": "^1.4.6",
+		"cors": "2.8.5",
+		"env-cmd": "10.1.0",
+		"express": "4.17.1",
+		"joi": "17.4.2",
+		"jsonwebtoken": "^8.5.1",
+		"pg": "^8.7.3",
+		"reflect-metadata": "^0.1.13",
+		"typeorm": "^0.3.7"
+	},
+	"devDependencies": {
+		"@types/express": "4.17.13",
+		"@types/express-jwt": "6.0.3",
+		"@types/node": "16.11.7",
+		"nodemon": "2.0.15",
+		"prettier": "2.5.0",
+		"ts-node": "10.7.0",
+		"typescript": "4.5.2"
+	}
 }
