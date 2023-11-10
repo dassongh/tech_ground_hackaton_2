@@ -13,7 +13,7 @@ export default class Schema {
 		street_name: Joi.string().required(),
 		street_type: Joi.string()
 			.valid(...Object.values(StreetType))
-			.required(),
+			.optional(),
 		building: Joi.string().optional(),
 		campus: Joi.string().optional(),
 		phone: Joi.string().optional(),

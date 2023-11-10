@@ -23,9 +23,12 @@ export enum MapObjectType {
 	BANK = 'bank',
 	SOCIAL_INSTITUTION = 'social_institution',
 	POST_OFFICE = 'post_office',
+	METRO = 'metro',
 }
 
 export enum StreetType {
 	STREET = 'street',
 	PROSPECT = 'prospect',
+	HIGHWAY = 'highway',
+	BOULEVARD = 'boulevard',
 }

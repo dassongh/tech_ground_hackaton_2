@@ -16,9 +16,9 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=superuser
       - POSTGRES_PASSWORD=superpassword
-      - BASE_URL=http://app:4000
+      - BASE_URL=http://app:80
     ports:
-      - '4000:4000'
+      - '80:80'
     depends_on:
       - postgres
     networks:

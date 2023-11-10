@@ -25,7 +25,7 @@ export default class MapObject {
 	@Column()
 	city: string;
 
-	@Column({ type: 'enum', enum: StreetType })
+	@Column({ type: 'enum', enum: StreetType, default: StreetType.STREET })
 	street_type: StreetType;
 
 	@Column()
