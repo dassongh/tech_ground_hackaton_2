@@ -26,7 +26,7 @@ export default class Service {
 			throw new CustomError(409, 'Default map object cannot be updated');
 		}
 
-		const payload = { ...existedMapObject, mapObject };
+		const payload = { ...existedMapObject, ...mapObject };
 		const updatedObject = await this.repository.save(payload);
 		return updatedObject;
 	}
