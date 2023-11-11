@@ -1,5 +1,6 @@
 import { NODE_ENV, PORT } from '../../config';
 
+import { auth } from '../../modules/auth/swagger';
 import { MapObject } from '../../modules/mapObject/swagger';
 import { ObjectAttribute } from '../../modules/objectAttribute/swagger';
 
@@ -33,5 +34,5 @@ export default {
 			url: url[NODE_ENV],
 		},
 	],
-	paths: { ...MapObject, ...ObjectAttribute },
+	paths: { ...auth, ...MapObject, ...ObjectAttribute },
 };

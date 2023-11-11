@@ -1,4 +1,5 @@
 import { Response } from 'express';
+import { ACCESS_TOKEN_COOKIE_MAX_AGE, REFRESH_TOKEN_COOKIE_MAX_AGE } from '../config';
 import { ResultWithData, ResultWithMessage } from './interfaces';
 
 export default class BaseController {
@@ -16,6 +17,21 @@ export default class BaseController {
 
 	protected okPaginated<T>(res: Response, result: T): Response<ResultWithData> {
 		return res.status(200).json({ count: result[1], data: result[0] });
+	}
+
+	protected setCookies(res: Response, result) {
+		res.cookie('access', result.access, {
+			maxAge: ACCESS_TOKEN_COOKIE_MAX_AGE,
+			sameSite: 'none',
+			httpOnly: true,
+		});
+		res.cookie('refresh', result.refresh, {
+			maxAge: REFRESH_TOKEN_COOKIE_MAX_AGE,
+			sameSite: 'none',
+			httpOnly: true,
+		});
+
+		return res.json({ message: 'ok' });
 	}
 
 	protected okWithMessage(res: Response, message: string): Response<ResultWithMessage> {

@@ -24,6 +24,7 @@ export enum MapObjectType {
 	SOCIAL_INSTITUTION = 'social_institution',
 	POST_OFFICE = 'post_office',
 	METRO = 'metro',
+	ACCESSIBLE_ROAD = 'accessible_road',
 }
 
 export enum StreetType {

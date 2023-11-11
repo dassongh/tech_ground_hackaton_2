@@ -1,3 +1,9 @@
+export const user = JSON.parse(`{
+	  "name": "admin",
+	  "email": "awesome_email@mail.com",
+	  "password": "aec40550859c6f85e286cafd59fb4396553b6e516f2a01375f13476d804b48a33e18de969e5b2115e13e7407cae940707a7e625cb08aa9604690bdf120d83a45"
+  }`);
+
 export const attributes = JSON.parse(`[
 		{ "type": "pandus" },
 		{ "type": "parking" },
