@@ -934,6 +934,48 @@ export const roads = JSON.parse(`[
         "id": 3
       }
     ]
-  }
+  },
+{
+    "title": "вул. Чупринки ",
+    "is_default": true,
+    "latitude": "50.44199878018717",
+    "longitude": "30.616892226483657",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+        {
+            "id": 3
+        }
+    ]
+},
+{
+    "title": "вулю Тампере - вул. Чупринки ",
+    "is_default": true,
+    "latitude": "50.441377247559714",
+    "longitude": "30.6145771539151",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+        {
+            "id": 3
+        }
+    ]
+},
+{
+    "title": "вул. Чупринки 2 ",
+    "latitude": "50.44268813087032",
+    "is_default": true,
+    "longitude": "30.61912999720521",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+        {
+            "id": 3
+        }
+    ]
+}
 ]
 `);
