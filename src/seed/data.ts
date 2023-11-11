@@ -707,3 +707,233 @@ export const objects = JSON.parse(`[
 }
 ]
 `);
+
+export const roads = JSON.parse(`[
+  {
+    "title": "Русанівський міст",
+    "is_default": true,
+    "latitude": "50.44334365331517",
+    "longitude": "30.598640826165525",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Русанівський міст",
+    "is_default": true,
+    "latitude": "50.444518839339494",
+    "longitude": "30.599552777262176",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "вул. Тампере - пр-т. Соборності",
+    "is_default": true,
+    "latitude": "50.43922757402309",
+    "longitude": "30.616227311194873",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "вул. Тампере - пр-т. Соборності",
+    "is_default": true,
+    "latitude": "50.43963100896699",
+    "longitude": "30.615996264943398",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "вул. Ентузіастів - бульвар Ігоря Шамо",
+    "is_default": true,
+    "latitude": "50.43488019892851",
+    "longitude": "30.599387572722073",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      },
+      {
+        "id": 16
+      }
+    ]
+  },
+
+  {
+    "title": "бульвар Ігоря Шамо - Русанівський бульвар",
+    "is_default": true,
+    "latitude": "50.43837399998435",
+    "longitude": "30.596830894916305",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "Русанівський бульвар - вул. Русанівська набережна",
+    "is_default": true,
+    "latitude": "50.438282755690246",
+    "longitude": "30.592145370721735",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "Русанівський бульвар - вул. Русанівська набережна",
+    "is_default": true,
+    "latitude": "50.43811898043767",
+    "longitude": "30.592182567378597",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "вул. Русанівська набережна - Русанівський бульвар",
+    "is_default": true,
+    "latitude": "50.438091647165834",
+    "longitude": "30.592021634832125",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "вул. Русанівська набережна - вул. Ентузиастів",
+    "is_default": true,
+    "latitude": "50.43305360503524",
+    "longitude": "30.592701032565504",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+  {
+    "title": "Русанівський автодорожний міст №1",
+    "is_default": true,
+    "latitude": "50.43303993693887",
+    "longitude": "30.59292633813056",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "Підз.перехід Русанівський автодорожний міст №1 - пр.Соборності",
+    "is_default": true,
+    "latitude": "50.43175619414018",
+    "longitude": "30.595551230812625",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "Підз.перехід пр.Соборності - Русанівський автодорожний міст №1",
+    "is_default": true,
+    "latitude": "50.43146913287024",
+    "longitude": "30.59574431626024",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 1
+      }
+    ]
+  },
+
+  {
+    "title": "п.Миру - вул. Г.Чупринки",
+    "is_default": true,
+    "latitude": "50.44369938992592",
+    "longitude": "30.620268117383493",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  },
+
+  {
+    "title": "вул. ЄюСверстюка - вул. О.Туманяна",
+    "is_default": true,
+    "latitude": "50.448186299799865",
+    "longitude": "30.60221471466153",
+    "type": "accessible_road",
+    "city": "Kyiv",
+    "street_name": "string",
+    "attributes": [
+      {
+        "id": 3
+      }
+    ]
+  }
+]
+`);
