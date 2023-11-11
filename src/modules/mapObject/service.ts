@@ -17,7 +17,7 @@ export default class Service {
 	}
 
 	public getById(id: number): Promise<MapObject | null> {
-		return this.repository.getOneOrFail({ id });
+		return this.repository.getOneOrFail({ id }, { attributes: true });
 	}
 
 	public async updateById(id: number, mapObject: MapObjectSave): Promise<MapObject> {
